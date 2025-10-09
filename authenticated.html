@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercises</title>
+    <link href="./style.css" rel="stylesheet" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="body-container quicksand">
+    <div class = "nav-container"></div>
+    <div class = 'main-container'>
+        <h1>Almost there!</h1>
+    </div>
+    <div class = 'account-container'>
+        <h3>Please choose your username</h3>
+        <form id="username-form" class="account-form">
+            <input type="username" id="change-username" class="account-input" placeholder="Username" required />
+            <button type="submit" class="account-submit">Submit</button>
+        </form>
+    </div>
+    
+    <div class = "footer"></div>
+
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>   <!-- This initialises Supabase on the site -->
+    <script src="./supabase.js"></script>
+    <script src="./userManagement_changeUsername.js"></script>
+</body>
+</html>
