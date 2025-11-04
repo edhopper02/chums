@@ -33,8 +33,8 @@ document.getElementById("username-form").addEventListener("submit", async (e) =>
     }
 
     let { data: inputData, error: inputError } = await supabase
-    .from('userDetails')
-    .insert([{ user_id: userData.user.id, sUsername: username, sEmail: userData.user.email }])
+    .from('user_details')
+    .insert([{ user_id: userData.user.id, username: username, email: userData.user.email }])
 
     if (inputError) {
         console.error("Error inserting data:", inputError.message);
@@ -44,3 +44,4 @@ document.getElementById("username-form").addEventListener("submit", async (e) =>
         alert("Success!");
     }
 })
+
