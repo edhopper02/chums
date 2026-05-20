@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Verification Redirect</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>Verifying your email...</h1>
+  <p>Please wait, you will be redirected shortly.</p>
+
+  <script>
+    // Get redirect URL from query parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const redirectTo = urlParams.get('redirect_to');
+
+    if (redirectTo) {
+      // Redirect to your app's deep link
+      window.location.href = redirectTo;
+    } else {
+      // Fallback if no redirect_to is provided
+      console.error("No redirect URL provided.");
+    }
+  </script>
+</body>
+</html>
